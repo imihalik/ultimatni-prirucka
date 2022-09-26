@@ -1,5 +1,9 @@
 # Ultimatni Prirucka
 
+## Dokumentace
+
+[Dokumentaci naleznete zde.](https://arostekmu.github.io/ultimatni-prirucka/navod.html)
+
 [![PyPI](https://img.shields.io/pypi/v/ultimatni-prirucka.svg)][pypi status]
 [![Status](https://img.shields.io/pypi/status/ultimatni-prirucka.svg)][pypi status]
 [![Python Version](https://img.shields.io/pypi/pyversions/ultimatni-prirucka)][pypi status]
