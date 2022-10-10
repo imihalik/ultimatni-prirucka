@@ -6,6 +6,10 @@ class Card:
     colour:str
     values: str
 
+@dataclass(frozen=True)
+class ToggleCard(Card):
+    is_revealed: bool = False
+
 #Card = namedtuple("Card", ["colour", "value"])
 
 
@@ -13,9 +17,9 @@ class Deck:
     values = [str(n) for n in range(2, 11)] + list('JQKA')
     colours = ['diamond', 'spade', 'club', 'heart']
 
-    def __init__(self):
+    def __init__(self, card_factory=Card):
         self._cards = [
-            Card(colour, value)
+            card_factory(colour, value)
             for colour in Deck.colours
             for value in Deck.values
         ]
