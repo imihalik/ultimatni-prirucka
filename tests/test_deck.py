@@ -1,4 +1,6 @@
 from ultimatni_prirucka.deck import Deck, Card
+import pytest
+from dataclasses import FrozenInstanceError
 
 from random import shuffle
 
@@ -34,4 +36,5 @@ def test_look_at_cards():
 
 def test_card_is_immutable():
     card = Card("b", "h")
-    card.colour = "b2"  # TODO: improve
+    with pytest.raises(FrozenInstanceError):
+        card.colour = "b2"  # TODO: improve
